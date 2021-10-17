@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .one {
+            /*как убрать белый остаток от боковых рамок?*/
+            padding: 100px;
+            background-color: #ccc;
+            background-image: url(r-b.png), url(l-b.png), url(l-t.png), url(r-t.png), url(l.png),
+            url(r.png), url(t.png), url(b.png);
+            background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, repeat-y, repeat-y, repeat-x, repeat-x;
+            background-position: right bottom, bottom left, top left, top right, left, right, top, bottom;
+        }
+        .two {
+            padding: 100px;
+            background: url(r-b.png) right bottom no-repeat, url(l-b.png) left bottom no-repeat,
+            url(l-t.png) left top no-repeat, url(r-t.png) right top no-repeat, url(l.png) left repeat-y,
+            url(r.png) right repeat-y, url(t.png) top repeat-x, url(b.png) bottom repeat-x;
+        }
+        .four {
+            border: 41px solid;
+            padding: 70px;
+            border-image: url(ramka.png) 41 round;
+        }
+    </style>
+</head>
+<body >
+    <div class="one">
+       парампампам <br>
+       парампампам <br>
+       парампампам <br>
+       парампампам <br>
+       парампампам <br>
+       парампампам <br>
+       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores iure sint rerum obcaecati delectus nulla aliquid ducimus, necessitatibus, ex fugiat deserunt nisi id repellat dolores. Vitae, consequatur ad. Accusamus, inventore.
+    </div>
+    <br>
+    <div class="two">
+       парампампам <br>
+       парампампам <br>
+       парампампам <br>
+       парампампам <br>
+       парампампам <br>
+       парампампам <br>
+    </div>
+    <br>
+    <!--почему называется 9 дивов, если их 8?-->
+<div style="padding:0px; background: url(l.png); background-repeat: repeat-y; background-position: left;">
+    <div style="padding:0px; background: url(r.png); background-repeat: repeat-y; background-position: right">
+        <div style="padding:0px;background: url(t.png); background-repeat: repeat-x; background-position: top;">
+            <div
+                style="padding:0px; background: url(r-t.png); background-repeat: no-repeat; background-position: right top;">
+                <div
+                    style="padding:0px; background: url(l-t.png); background-repeat: no-repeat; background-position: left top;">
+                    <div
+                        style="padding:0px; background: url(b.png); background-repeat: repeat-x; background-position: bottom;">
+                        <div
+                            style="padding:0px; background: url(l-b.png); background-repeat: no-repeat; background-position: left bottom;">
+                            <div
+                                style="padding:100px; background:url(r-b.png);background-repeat: no-repeat; background-position: right bottom;">
+                               
+                                    парампампам <br>
+                                    парампампам <br>
+                                    парампампам <br>
+                                    парампампам <br>
+                                    парампампам <br>
+                                    парампампам <br>
+                               
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<br>
+<div class="four">
+    парампампам <br>
+    парампампам <br>
+    парампампам <br>
+    парампампам <br>
+    парампампам <br>
+    парампампам <br>
+    парампампам <br>
+    парампампам <br>
+</div>
+</body>
+</html>
