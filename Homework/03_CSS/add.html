@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic</title>
+    <style>
+        @media all {
+            .first>div {
+                width: 100px;
+                float: left;
+            }
+
+           .first>div {
+                background-color: silver;
+                color: grey;
+                border: solid black 1px;
+                position: relative;
+                cursor: pointer;
+            }
+
+            .spisok {
+                width: 100px;
+                opacity: 0;
+            visibility: hidden;
+            transition: 2s;
+            height: 0px;
+                
+            }
+
+            div.spisok>div {
+                background-color: silver;
+                border: solid black 1px;
+                cursor: pointer;
+            }
+
+            .first>div:hover .spisok {
+                opacity: 1;
+                visibility: visible;
+                position: absolute;
+                left: 0px;
+                top: 20px;
+            }
+
+            .first>div:hover {
+                background-color: black;
+                
+            }
+        }
+
+        @media all and (max-width: 630px) {
+            .first {
+                width: 100px;
+            }
+
+           .first>div {
+                background-color: silver;
+                color: grey;
+                border: solid black 1px;
+                position: relative;
+                cursor: pointer;
+            }
+
+            .spisok {
+                width: 100px;
+                opacity: 0;
+            visibility: hidden;
+            transition: 2s;
+            
+            }
+            
+
+            div.spisok>div {
+                background-color: silver;
+                border: solid black 1px;
+                cursor: pointer;
+            }
+
+            .first>div:hover .spisok {
+                opacity: 1;
+                visibility: visible;
+                position: absolute;
+                left: 100px;
+                top: -1px;
+            }
+
+            .first>div:hover {
+                background-color: black;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="first">
+        <div>Понедельник
+            <div class="spisok">
+                <div>Завтрак</div>
+                <div>Обед</div>
+                <div>Ужин</div>
+            </div>
+        </div>
+        <div>Вторник
+            <div class="spisok">
+                <div>Завтрак</div>
+                <div>Обед</div>
+                <div>Ужин</div>
+            </div>
+        </div>
+        <div>Среда
+            <div class="spisok">
+                <div>Завтрак</div>
+                <div>Обед</div>
+                <div>Ужин</div>
+            </div>
+        </div>
+        <div>Четверг
+            <div class="spisok">
+                <div>Завтрак</div>
+                <div>Обед</div>
+                <div>Ужин</div>
+            </div>
+        </div>
+        <div>Пятница
+            <div class="spisok">
+                <div>Завтрак</div>
+                <div>Обед</div>
+                <div>Ужин</div>
+            </div>
+        </div>
+        <div>Суббота
+            <div class="spisok">
+                <div>Завтрак</div>
+                <div>Обед</div>
+                <div>Ужин</div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
