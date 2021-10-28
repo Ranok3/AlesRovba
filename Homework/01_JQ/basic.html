@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        th {
+            background-color: grey;
+            color: white;
+        }
+
+        td:not(:first-child) {
+            border-left: 1px dotted;
+            padding-left: 5px;
+            text-align: center;
+        }
+
+        td:not(.last) {
+            border-bottom: 1px dotted;
+        }
+
+        tr:nth-child(2n+1):not(:last-child) {
+            background-color: silver;
+        }
+
+        table {
+            width: 100%;
+            border-spacing: 0px;
+            border: 3px dotted;
+
+        }
+
+        div {
+            text-align: center;
+            color: silver
+        }
+        button {
+            background-color:#0d6ffe ;
+            color: white;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <tr>
+            <th>ФИО</th>
+            <th>пол</th>
+            <th>должность</th>
+            <th>дата рож.</th>
+            <th>Данные 01</th>
+            <th>Данные 02</th>
+        </tr>
+        <tr>
+            <td>И И И</td>
+            <td>М</td>
+            <td>начальник</td>
+            <td>01.01.1960</td>
+            <td>4567</td>
+            <td>3453</td>
+        </tr>
+        <tr>
+            <td>П И П</td>
+            <td>Ж</td>
+            <td>секретарь</td>
+            <td>01.01.1989</td>
+            <td>98795</td>
+            <td>46523</td>
+        </tr>
+        <tr>
+            <td>С И И</td>
+            <td>М</td>
+            <td>бухгалтер</td>
+            <td>01.01.1979</td>
+            <td>743434</td>
+            <td>987979</td>
+        </tr>
+        <tr>
+            <td>П Ф Ф</td>
+            <td>М</td>
+            <td>водитель</td>
+            <td>01.01.1963</td>
+            <td>123123</td>
+            <td>123123123</td>
+        </tr>
+        <tr>
+            <td class="last">К С И</td>
+            <td class="last">М</td>
+            <td class="last">водитель 2</td>
+            <td class="last">01.01.1983</td>
+            <td class="last">123123</td>
+            <td class="last">123123</td>
+        </tr>
+    </table>
+    <div>ДАННЫЕ О СОТРУДНИКАХ</div>
+    <button>Нет скрытых строк</button>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function ($) {
+         $('tr').click(function () {
+            $('tr:hover').css('display', 'none')   
+         }).click(function () {
+            $('button').text('Показать все строки')
+         })
+         $('button').click(function () {
+            $('button').text('Нет скрытых строк')
+         })
+            .click(function () {
+                $('tr').css('display', 'table-row')
+            })
+        });
+    </script>
+</body>
+
+</html>

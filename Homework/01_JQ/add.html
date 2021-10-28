@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h3>Проверка пароля</h3>
+    <form action="http://fe.it-academy.by/TestForm.php" method="get" name="form1">
+        <fieldset>
+            <label><input type="text" id="pass" class="pas"> <sup>*</sup> Пароль</label><br>
+            <label><input type="text" id="cpass" class="pas"> <sup>*</sup> Повторите пароль</label> <br>
+            <br>
+            <input type="submit" name="sign3" value="Отправить">
+        </fieldset>
+    </form>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script>
+        $(document).ready(function () {
+            $('#pass, #cpass').on('keyup', function () {
+                if ($('#pass').val() == "") {
+                    $('.pas').css('background-color', 'green')
+                } else if ($('#cpass').val() == "") {
+                    $('.pas').css('background-color', 'green')
+                } else
+                    if ($('#pass').val() == $('#cpass').val()) {
+                        $('.pas').css('background-color', 'green')
+                    }
+                    else $('.pas').css('background-color', 'red')
+            })
+        })
+    </script>
+</body>
+
+</html>
